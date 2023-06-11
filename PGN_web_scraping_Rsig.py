@@ -40,8 +40,8 @@ new = old - timedelta(days=31)
 new=new.strftime("%Y-%m-%d")
 
 lat=input("Enter lat: "); lon=input("Enter lon: ")
-lon1=float(lon)-0.15; lon2=float(lon)+0.15
-lat1=float(lat)-0.15; lat2=float(lat)+0.15
+lon1=float(lon)-0.10; lon2=float(lon)+0.10
+lat1=float(lat)-0.10; lat2=float(lat)+0.10
 
 plt.subplot(2,1,1)
 url = "https://ofmpub.epa.gov/rsig/rsigserver?SERVICE=wcs&VERSION=1.0.0&REQUEST=GetCoverage&FORMAT=ascii&TIME="+str(new)+"T00:00:00Z/"+date+"T23:59:59Z&BBOX="+str(lon1)+","+str(lat1)+","+str(lon2)+","+str(lat2)+"&COVERAGE=pandora.L2_rnvh3p1_8.tropospheric_nitrogen_dioxide&COMPRESS=0"  # Replace with the URL of the archive file
